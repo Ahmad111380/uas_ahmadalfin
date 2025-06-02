@@ -1,0 +1,242 @@
+/* Reset dan Dasar */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 150vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fdfdfd;
+  color: #333;
+  padding-top: 70px;
+  line-height: 1.6;
+}
+
+/* Gambar Profil */
+img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Header & Navigasi */
+header {
+  background-color: #000;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  flex-wrap: wrap;
+}
+
+header strong {
+  font-size: 1.5em;
+}
+
+nav a {
+  margin: 0 10px;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Dropdown Menu */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background-color: #374151;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9fafb;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  min-width: 140px;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: #1f2937;
+  padding: 10px 14px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Layout */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  gap: 20px;
+}
+
+.left-column {
+  flex: 2;
+  min-width: 300px;
+}
+
+.right-column {
+  flex: 1;
+  min-width: 250px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Kartu */
+.card {
+  background-color: #e5e7eb;
+  padding: 30px;
+  margin-bottom: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+h1, h2 {
+  color: #111827;
+  margin-bottom: 10px;
+}
+
+/* Formulir */
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0 16px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  font-size: 1em;
+}
+
+button {
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 1em;
+}
+
+button:hover {
+  background-color: #2563eb;
+}
+
+/* Tabel */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th, td {
+  border: 1px solid #cbd5e1;
+  padding: 10px;
+  text-align: left;
+  background-color: #f1f5f9;
+}
+
+th {
+  background-color: #93c5fd;
+  color: #1e3a8a;
+}
+
+/* Opini Grid */
+.opini-grid {
+  position: sticky;
+  top: 70px;
+  left: 0;
+  width: 300px;
+  background-color: #fdfdfd;
+  padding: 20px;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 0;
+  flex-shrink: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.opini-item {
+  background-color: #93c5fd;
+  color: #1e3a8a;
+  padding: 15px 20px;
+  border-radius: 8px;
+  font-style: italic;
+  text-align: center;
+  min-width: 120px;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Footer */
+footer {
+  background-color: #1f2937;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 30px;
+}
+
+/* Scroll Margin untuk Navigasi */
+#beranda,
+#tentang,
+#portofolio {
+  scroll-margin-top: 90px;
+}
+
+/* Responsif */
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .right-column,
+  .left-column {
+    width: 100%;
+  }
+
+  .opini-grid {
+    position: static;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+  }
+}
